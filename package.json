@@ -6,8 +6,12 @@
   "main": "dist/index.js",
   "typings": "dist/types/index.d.ts",
   "files": [
+    "bin",
     "dist"
   ],
+  "bin": {
+    "lcov-badge": "./bin/cli.js"
+  },
   "author": "jacobbubu <rong.shen@gmail.com>",
   "repository": {
     "type": "git",
