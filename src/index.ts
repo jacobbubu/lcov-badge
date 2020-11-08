@@ -12,7 +12,7 @@ export default function (filename: string) {
       },
       { found: 0, hit: 0 }
     )
-    return Math.floor((linesCoverage.hit / linesCoverage.found) * 10000) / 100 + '% covered'
+    return `(${Math.floor((linesCoverage.hit / linesCoverage.found) * 10000) / 100}%) covered`
   } catch (err) {
     console.error('Failed to generate badge text', err)
   }
