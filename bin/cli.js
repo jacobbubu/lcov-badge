@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+const fs = require('fs')
 const getBadgeText = require('../dist').default
 
 const lcovFile = process.argv[2]
@@ -8,4 +9,8 @@ if (!lcovFile) {
   process.exit(1)
 }
 
-console.log(getBadgeText(lcovFile))
+if (fs.existsSync(lcovFile)) {
+  console.log(getBadgeText(lcovFile))
+} else {
+  console.error('The lcov.info file does not exist.')
+}
